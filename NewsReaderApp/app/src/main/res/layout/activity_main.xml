@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#6200EE"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="The Daily Reader"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <ImageButton
+            android:id="@+id/btnBookmark"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/btn_star_big_off"
+            android:background="@android:color/transparent"
+            android:contentDescription="Bookmark"/>
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_share"
+            android:background="@android:color/transparent"
+            android:contentDescription="Share"/>
+    </LinearLayout>
+
+    <!-- Scroll -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:scaleType="centerCrop"
+                android:contentDescription="Header Image"/>
+
+            <!-- Category -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TECHNOLOGY"
+                android:background="#6200EE"
+                android:textColor="@android:color/white"
+                android:padding="6dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Rise of AI in Everyday Life"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Author -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@android:drawable/sym_def_app_icon"
+                    android:contentDescription="Author"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe | Apr 2026"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Buttons -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnIntro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Intro"/>
+
+                    <Button
+                        android:id="@+id/btnKey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Key Points"/>
+
+                    <Button
+                        android:id="@+id/btnAnalysis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Analysis"/>
+
+                    <Button
+                        android:id="@+id/btnConclusion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Conclusion"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Sections -->
+            <TextView
+                android:id="@+id/sectionIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Introduction"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write 150+ words here..."
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/sectionKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Key Points"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write 150+ words..."/>
+
+            <TextView
+                android:id="@+id/sectionAnalysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Analysis"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write 150+ words..."/>
+
+            <TextView
+                android:id="@+id/sectionConclusion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conclusion"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write 150+ words..."/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Back to Top -->
+    <Button
+        android:id="@+id/btnTop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="↑"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="12dp"/>
+
+</RelativeLayout>

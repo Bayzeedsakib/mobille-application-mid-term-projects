@@ -1,0 +1,4 @@
+<resources>
+    <string name="no_contacts">No contacts found</string>
+    <string name="app_name">ContactBookApp</string>
+</resources>

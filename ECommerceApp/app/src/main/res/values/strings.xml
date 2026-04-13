@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ECommerceApp</string>
+
+    <string name="product_name">Product Name</string>
+    <string name="product_price">$100</string>
+
+    <string name="product_image_desc">Product Image</string>
+    <string name="add_to_cart">Add to Cart</string>
+</resources>

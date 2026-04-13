@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Student Info -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: John Doe" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: 12345" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester: 5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Department: CSE" />
+
+        <!-- Table -->
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_marginTop="16dp">
+
+            <!-- Header -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Obtained"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grade"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <!-- Summary -->
+        <TextView
+            android:id="@+id/summaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Summary"
+            android:layout_marginTop="10dp"/>
+
+        <!-- GPA -->
+        <TextView
+            android:id="@+id/gpaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPA: 0.0"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <!-- Inputs -->
+        <EditText
+            android:id="@+id/subjectInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subject Name"/>
+
+        <EditText
+            android:id="@+id/obtainedInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Obtained Marks"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/totalInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Total Marks"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Subject"/>
+
+    </LinearLayout>
+</ScrollView>

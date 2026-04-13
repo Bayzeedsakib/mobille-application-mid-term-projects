@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LearningPortalApp</string>
+
+    <string name="back">◀</string>
+    <string name="forward">▶</string>
+    <string name="refresh">🔄</string>
+    <string name="home">🏠</string>
+
+    <string name="enter_url">Enter URL</string>
+    <string name="go">Go</string>
+
+    <string name="google">Google</string>
+    <string name="youtube">YouTube</string>
+    <string name="wikipedia">Wikipedia</string>
+    <string name="khan">Khan Academy</string>
+    <string name="university">University</string>
+</resources>
