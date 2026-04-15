@@ -1,5 +1,14 @@
 package com.example.universityeventapp.ui
 
+import android.graphics.Color
+import android.os.Bundle
+import android.widget.TableLayout
+import android.widget.TableRow
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.example.universityeventapp.R
+import com.example.universityeventapp.utils.SeatManager
+
 class BookingActivity : AppCompatActivity() {
 
     lateinit var seatManager: SeatManager
@@ -33,8 +42,8 @@ class BookingActivity : AppCompatActivity() {
         }
     }
 
-    fun updateSeatColor(view: TextView, i: Int, j: Int) {
-        when(seatManager.seats[i][j]) {
+    private fun updateSeatColor(view: TextView, i: Int, j: Int) {
+        when (seatManager.seats[i][j]) {
             0 -> view.setBackgroundColor(Color.GREEN)
             1 -> view.setBackgroundColor(Color.RED)
             2 -> view.setBackgroundColor(Color.BLUE)

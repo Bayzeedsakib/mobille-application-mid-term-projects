@@ -22,7 +22,7 @@ class EventsListActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val searchView = findViewById<SearchView>(R.id.searchView)
 
-        // ✅ Use the function here
+
         eventList = getSampleEvents()
 
         adapter = EventAdapter(eventList) {
@@ -46,7 +46,7 @@ class EventsListActivity : AppCompatActivity() {
         })
     }
 
-    // ✅ FUNCTION goes INSIDE SAME FILE
+
     private fun getSampleEvents(): List<Event> {
         return listOf(
             Event(1, "Tech Summit", "10 May", "10:00 AM", "Auditorium", "Tech",
