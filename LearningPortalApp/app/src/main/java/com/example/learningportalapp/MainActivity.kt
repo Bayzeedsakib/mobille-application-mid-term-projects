@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         webView.settings.javaScriptEnabled = true
         webView.settings.domStorageEnabled = true
 
-        //  WebViewClient
+
         webView.webViewClient = object : WebViewClient() {
 
             override fun onPageStarted(view: WebView?, url: String?, favicon: android.graphics.Bitmap?) {
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        //  WebChromeClient
+
         webView.webChromeClient = object : WebChromeClient() {
             override fun onProgressChanged(view: WebView?, newProgress: Int) {
                 progressBar.progress = newProgress
@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
             loadUrlFromInput()
         }
 
-        //  Shortcuts
+
         btnGoogle.setOnClickListener { webView.loadUrl("https://www.google.com") }
         btnYouTube.setOnClickListener { webView.loadUrl("https://www.youtube.com") }
         btnWiki.setOnClickListener { webView.loadUrl("https://www.wikipedia.org") }
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
         btnUniversity.setOnClickListener { webView.loadUrl("https://www.du.ac.bd") }
     }
 
-    //  URL validation
+
     private fun loadUrlFromInput() {
         var url = etUrl.text.toString().trim()
 
@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity() {
         webView.loadUrl(url)
     }
 
-    //  Internet check
+
     private fun isConnected(): Boolean {
         val cm = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val network = cm.activeNetworkInfo
